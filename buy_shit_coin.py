@@ -33,10 +33,8 @@ class Strategy:
             if f"/{self.param.quote}" in symbol[0]:
                 price = tickers[symbol[0]]["last"]
                 if price <= self.param.bar:
-                    print(symbol[0], tickers[symbol[0]]["last"])
                     if self.investment_amount > self.param.lot:
-                        buy_num = int(self.param.lot / tickers[symbol[0]]["last"])
-
+                        buy_num = int(self.param.lot / price)
                         try:
                             order_result = self.binance.create_market_buy_order(
                                 symbol=symbol[0],
