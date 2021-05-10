@@ -1,0 +1,8 @@
+{
+  "api_key": "",
+  "api_secret": "",
+  "quote": "USDT",
+  "investment_amount": 100,
+  "bar": 0.001,
+  "lot": 1
+}
